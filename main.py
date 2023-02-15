@@ -21,7 +21,7 @@ logging.basicConfig(
     filename="data/statics.log",
     level=logging.INFO)
 logger = logging.getLogger("Anonymous")
-# logging code end
+
 
 
 # Functions for the bot
