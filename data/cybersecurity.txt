@@ -32,7 +32,7 @@ Cybersecurity is a broad field, and there's always something new to learn and ex
 
 5) Exploit Development:
 	a. Buffer Overflows - https://www.youtube.com/playlist?list=PLLKT__MCUeix3O0DPbmuaRuR_4Hxo4m3G
-	b. TryHackeMe - https://tryhackme.com/room/bufferoverflowprep
+	b. TryHackMe - https://tryhackme.com/room/bufferoverflowprep
 	c. Reverse Engineering And Exploit Development - https://www.youtube.com/watch?v=cOOPlMNA-A8&list=PLziMzyAZFGMfIegan2LLcEj9R69-f3sFU
 	d. CNIT - https://samsclass.info/127/127_S22.shtml
 	e. Exploit Courses - https://exploit.courses/#/index
