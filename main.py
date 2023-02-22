@@ -174,7 +174,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 keep_alive()
-TOKEN = "5835782321:AAFIl48TxXh9D3kSrMOe5PYsB6eV9pt0SMA"
+TOKEN = "put token here"
 print("BOT has started.")
 
 while True:
