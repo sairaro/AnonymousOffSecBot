@@ -56,7 +56,7 @@ data_for_pathway=data[0]['Pathway']
 
 ##Bot interaction Functions
 
-# Hello Start 
+# Hello Function Start 
 async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
         f'Hello {update.effective_user.first_name}, How may I help you? Type "/help" to get help.'
@@ -65,9 +65,9 @@ async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info('People Who Said Hello: '+str(data_for_hello))
     data_for_hello+=1
     updateJsonFile("Hello",data_for_hello)
-# Hello end
+# Hello Function end
 
-
+# Start Function start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         "Hi! I'm Anonymous Bot and I'll be helping you get started. Enter /help for more information.")
@@ -75,8 +75,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     logger.info('Total User Till Now: '+str(data_for_start))
     data_for_start+=1
     updateJsonFile("Start",data_for_start)
+# Start Function end
 
-
+# Help Function start
 intro = open(rootPath + "data/start.txt", "r").read()
 async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(intro, disable_web_page_preview=True)
@@ -84,8 +85,9 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
     logger.info('Total Clicks On Help: '+str(data_for_intro))
     data_for_intro+=1
     updateJsonFile("Help",data_for_intro)
+# Help Function end
 
-
+# Cybersecurity Function start
 cyber = open(rootPath + "data/cybersecurity.txt", "r").read()
 async def cybersecurity(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(cyber, disable_web_page_preview=True)
@@ -93,9 +95,9 @@ async def cybersecurity(update: Update, context: ContextTypes.DEFAULT_TYPE):
     logger.info('Total Clicks On Help: '+str(data_for_cyber))
     data_for_cyber+=1
     updateJsonFile("Cybersecurity",data_for_cyber)
+# Cybersecurity Function end
 
-
-
+# Programming Function start
 pro = open(rootPath + "data/programming.txt", "r").read()
 async def programming(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(pro, disable_web_page_preview=True)
@@ -103,9 +105,9 @@ async def programming(update: Update, context: ContextTypes.DEFAULT_TYPE):
     logger.info('Total Clicks On Programming: '+str(data_for_pro))
     data_for_pro+=1
     updateJsonFile("Programming",data_for_pro)
+# Programming Function end
 
-
-
+# Darkweb Function start
 dark = open(rootPath + "data/darkweb.txt", "r").read()
 async def darkweb(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(dark, disable_web_page_preview=True)
@@ -113,8 +115,9 @@ async def darkweb(update: Update, context: ContextTypes.DEFAULT_TYPE):
     logger.info('Total Clicks On Darkweb: '+str(data_for_darkweb))
     data_for_darkweb+=1
     updateJsonFile("Darkweb",data_for_darkweb)
+# Darkweb Function end
 
-
+# IT Function start
 forit = open(rootPath + "data/it.txt", "r").read()
 async def it(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(forit, disable_web_page_preview=True)
@@ -122,8 +125,9 @@ async def it(update: Update, context: ContextTypes.DEFAULT_TYPE):
     logger.info('Total Clicks On IT: '+str(data_for_it))
     data_for_it+=1
     updateJsonFile("Information Technology",data_for_it)
+# IT Function end
 
-
+# Rules Function start
 rulefile = open(rootPath + "data/rules.txt", "r", encoding="utf8").read()
 x = rulefile.split("---")
 async def rules(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -135,11 +139,10 @@ async def rules(update: Update, context: ContextTypes.DEFAULT_TYPE):
     logger.info('Total Clicks On Rules: '+str(data_for_rules))
     data_for_rules+=1
     updateJsonFile("Rules",data_for_rules)
+# Rules Function end
 
 
 # Pathway Function Start
-
-
 async def pathway(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     keyboard = [
         [
@@ -167,7 +170,6 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.callback_query.message.edit_text(pathfp, disable_web_page_preview=True)
     else:
         await update.callback_query.message.edit_text(pathfh, disable_web_page_preview=True)
-
 # Pathway Function End
 
 
